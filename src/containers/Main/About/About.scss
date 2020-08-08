@@ -1,0 +1,71 @@
+@import "../../../assets/styles/__mixin";
+@import "../../../assets/styles/__variables";
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 150px 10px 120px 10px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: left;
+    @include descriptionDimension();
+  }
+
+  &__image {
+    @include imageDimension();
+    position: relative;
+
+    &__pepe {
+      @include imageDimension();
+    }
+
+    &__sweat--left {
+      position: absolute;
+      top: 20%;
+      left: 17%;
+      width: 5%;
+      overflow: visible;
+      fill: white;
+      animation: sweatLeft 3s linear infinite;
+
+      @keyframes sweatLeft {
+        20% {
+          transform: translateY(100%) rotate(10deg) scale(1.2);
+        }
+        40% {
+          transform: translate(-20%, 200%) rotate(20deg) scale(1.4);
+        }
+        60% {
+          transform: translate(-80%, 400%) rotate(30deg) scale(1.6);
+        }
+        80% {
+          transform: translate(-160%, 600%) rotate(20deg) scale(1.8);
+        }
+        100% {
+          transform: translate(-200%, 800%) rotate(15deg) scale(2);
+        }
+      }
+    }
+
+    &__sweat--right {
+      position: absolute;
+      top: 7%;
+      right: 30%;
+      width: 3%;
+      animation: sweatRight 3s ease-in infinite;
+      fill: white;
+
+      @keyframes sweatRight {
+        100% {
+          transform: rotate(-45deg) translateY(500%) scale(2);
+        }
+      }
+    }
+  }
+}

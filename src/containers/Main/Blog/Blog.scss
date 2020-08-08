@@ -1,0 +1,8 @@
+@import "../../../assets/styles/__mixin";
+@import "../../../assets/styles/__variables";
+
+.blogs {
+  display: flex;
+  flex-flow: column wrap;
+  margin: $containerMargin;
+}

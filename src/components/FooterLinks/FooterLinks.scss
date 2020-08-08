@@ -1,0 +1,17 @@
+@import "../../assets/styles/__mixin";
+@import "../../assets/styles/__variables";
+
+.footer {
+  &__right {
+    i {
+      color: black;
+      margin: 20px;
+      font-size: 1.5rem;
+      transition: transform 300ms ease-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

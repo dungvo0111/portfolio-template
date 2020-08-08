@@ -1,0 +1,9 @@
+@import "../../../assets/styles/__mixin";
+@import "../../../assets/styles/__variables";
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: $containerMargin;
+}

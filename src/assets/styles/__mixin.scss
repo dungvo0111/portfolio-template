@@ -1,0 +1,15 @@
+@mixin borderContainer() {
+  border: 2px $almostIntegrifyYellow solid;
+  border-radius: 25px;
+}
+
+@mixin imageDimension() {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+@mixin descriptionDimension() {
+  max-width: 1000px;
+  width: 100%;
+}

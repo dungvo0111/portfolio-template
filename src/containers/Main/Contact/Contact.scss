@@ -1,0 +1,38 @@
+@import "../../../assets/styles/__mixin";
+@import "../../../assets/styles/__variables";
+
+.contact-form {
+  @include borderContainer();
+  max-width: 960px;
+  margin: 50px 10px;
+  padding: 25px;
+
+  &__elem {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+      color: black;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+
+      &:focus {
+        border: 3px $almostIntegrifyYellow solid;
+        outline: none;
+      }
+    }
+  }
+
+  //Large devices (desktops, 992px and up)
+  @media only screen and (min-width: 992px) {
+    margin: 50px auto;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../assets/styles/__mixin";
+@import "../../assets/styles/__variables";
+
+.blogs {
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 30px;
+
+    &:hover {
+      @include borderContainer();
+    }
+  }
+
+  &__image {
+    @include imageDimension();
+  }
+
+  &__description {
+    @include descriptionDimension();
+    margin-top: 20px;
+  }
+
+  &__button {
+    z-index: 1;
+    transition: color 300ms;
+
+    &::before {
+      content: "";
+      background-color: $almostIntegrifyYellow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: black;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+    }
+  }
+}

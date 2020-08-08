@@ -1,0 +1,11 @@
+@import "../../assets/styles/__mixin";
+@import "../../assets/styles/__variables";
+
+.projects {
+  &__card {
+    @include borderContainer();
+    max-width: 500px;
+    padding: 30px;
+    margin-bottom: 25px;
+  }
+}

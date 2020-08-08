@@ -1,0 +1,39 @@
+@import "assets/styles/__variables";
+@import "assets/styles/__mixin";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana,
+    sans-serif;
+}
+
+h1,
+h3,
+h4 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+  @media only screen and (min-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  line-height: 1.5em;
+  text-align: left;
+  color: gray;
+  margin-top: 50px;
+}
+
+hr {
+  border-color: $almostIntegrifyYellow;
+}

@@ -1,0 +1,24 @@
+@import "../../assets/styles/__variables";
+@import "../../assets/styles/__mixin";
+
+button {
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  position: relative;
+  margin-top: 25px;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px $almostIntegrifyYellow solid;
+  }
+
+  &:focus {
+    color: $almostIntegrifyYellow;
+    border: 2px $almostIntegrifyYellow solid;
+  }
+}
+
+
